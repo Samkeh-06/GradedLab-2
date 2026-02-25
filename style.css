@@ -1,16 +1,89 @@
-body{
+body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
     margin: 0;
-    font-family: "Comic Sans MS",cursive,sans-serif;
-}
-div{
-    border: 2px black thick;
-    box-sizing: border-box;
-    
 }
 
-body > div{
-    display: grid;
-    grid-template-rows: auto auto 1fr auto;
-    min-height: 100vh;
+div {
+    border: 2px solid black;
+    box-sizing: border-box;
 }
-    
+
+span {
+    border: none;
+}
+
+
+body > div {
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+
+
+body > div > .id:first-child {
+    background: yellow;
+}
+
+
+
+body > div > div:nth-child(2) {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    grid-template-rows: auto auto;
+}
+
+
+body > div > div:nth-child(2) span:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+
+body > div > div:nth-child(2) span:nth-child(1) {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+
+body > div > div:nth-child(2) span:nth-child(3) {
+    grid-column: 3;
+    grid-row: 2;
+    font-style: italic;
+}
+
+
+
+body > div > div.class {
+    display: grid;
+    grid-template-columns: auto auto 1fr auto;
+    grid-template-rows: auto auto;
+}
+
+
+div.class > .id {
+    background: yellow;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+
+#class {
+    grid-column: 2 / 4;
+    grid-row: 1;
+}
+
+
+div.class > span {
+    grid-column: 4;
+    grid-row: 1;
+}
+
+
+#H {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    width: 33.3333%;
+    align-self: stretch; 
+    margin: 0% auto;
+    text-align: right;
+}
