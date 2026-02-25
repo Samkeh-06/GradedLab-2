@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    font-family: "Comic Sans MS",cursive,sans-serif;
+}
+div{
+    border: 2px black thick;
+    box-sizing: border-box;
+    
+}
+
+body > div{
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+}
+    
